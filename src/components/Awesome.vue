@@ -7,12 +7,12 @@
 
 <script>
 export default {
-  name: 'Awesome',
+  name: "Awesome",
   props: {
     msg: String,
     btn: Object
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -1,7 +1,7 @@
 <template>
   <div class="awesome">
     <h1>{{ msg }}</h1>
- 
+    <button>{{btn.name}}</button>
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
   name: 'Awesome',
   props: {
-    msg: String
+    msg: String,
+    btn: Object
   }
 }
 </script>

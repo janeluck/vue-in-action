@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!--   <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Awesome msg="Awesome jane" v-bind:btn="{name:'button01'}"/>
-    <TodoList v-bind:todos="[{name: 'todo0', id: 't0'},{name: 'todo1', id: 't1'}]"/>
+    <TodoList 
+    
+    newTodo="0" v-bind:todos="[{name: 'todo0', id: 't0'},{name: 'todo1', id: 't1'}]"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+//import HelloWorld from "./components/HelloWorld.vue";
 import Awesome from "./components/Awesome.vue";
 import TodoList from "./components/TodoList.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld,
+   // HelloWorld,
     Awesome,
     TodoList
   }

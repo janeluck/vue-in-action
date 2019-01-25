@@ -1,9 +1,18 @@
 <template>
     <div>
-        <p>sweet</p>
-        <button v-bind:disabled="isButtonDisabled">Button0</button>
-        <button v-bind:disabled="!isButtonDisabled">Button1</button>
-        <div hh="jane"></div>
+
+        <div>
+            <p>sweet</p>
+            <button v-bind:disabled="isButtonDisabled">Button0</button>
+            <button v-bind:disabled="!isButtonDisabled">Button1</button>
+            <div hh="jane">{{jane}}</div>
+        </div>
+
+        <div>
+            <p>original msg: {{msg}}</p>
+            <p>reverse msg: {{reverseMsg}}</p>
+        </div>
+
     </div>
 </template>
 
@@ -14,7 +23,14 @@
         data: function () {
             return {
                 isButtonDisabled: false,
-                jane: 'xxx'
+                jane: 'xxx',
+                msg: 'lemon'
+            }
+        },
+        props: {},
+        computed: {
+            reverseMsg: function () {
+                return this.msg.split('').reverse().join('')
             }
         }
     }

@@ -37,6 +37,14 @@
             <p v-show="true">show true</p>
         </div>
 
+
+        <ul>
+            <li v-for="item in items">{{item}}</li>
+        </ul>
+        <ul>
+            <li v-for="item in objs"  v-bind:key="item.name">{{item.name}}</li>
+        </ul>
+
     </div>
 </template>
 
@@ -46,6 +54,13 @@
         name: "Sweet",
         data: function () {
             return {
+                items:['a','b','c','d'],
+                objs:[
+                    {name: 'jane01'},
+                    {name: 'jane02'},
+                    {name: 'jane03'},
+                    {name: 'jane04'},
+                ],
                 pType: 2,
                 isButtonDisabled: false,
                 jane: 'xxx',

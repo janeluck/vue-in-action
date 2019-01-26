@@ -12,6 +12,11 @@
             <p>original msg: {{msg}}</p>
             <p>reverse msg: {{reverseMsg}}</p>
         </div>
+        <div>
+            <p class="font"
+               v-bind:class="{color: color}"
+            >green</p>
+        </div>
 
     </div>
 </template>
@@ -24,7 +29,8 @@
             return {
                 isButtonDisabled: false,
                 jane: 'xxx',
-                msg: 'lemon'
+                msg: 'lemon',
+                color: true
             }
         },
         props: {},
@@ -37,5 +43,12 @@
 </script>
 
 <style scoped>
+    .color {
+        color: greenyellow;
+    }
 
+    .font {
+        font-weight: bolder;
+        font-size: larger;
+    }
 </style>

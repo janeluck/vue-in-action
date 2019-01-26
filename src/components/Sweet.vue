@@ -50,6 +50,21 @@
             <input type="text" v-model="inputName">
             <button @click="log">log inputName</button>
         </div>
+
+
+        <div id='example-3'>
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>Checked names: {{ checkedNames }}</span>
+
+
+
+        </div>
     </div>
 </template>
 
@@ -59,6 +74,7 @@
         name: "Sweet",
         data: function () {
             return {
+                checkedNames: [],
                 inputName: 'originName',
                 items: ['a', 'b', 'c', 'd'],
                 objs: [

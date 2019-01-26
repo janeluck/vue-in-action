@@ -17,8 +17,14 @@
                v-bind:class="{color: color}"
             >green</p>
             <p
-               v-bind:class="[tako]"
+                    v-bind:class="[tako]"
             >pink</p>
+            <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+                wind
+            </div>
+            <div v-bind:style="[baseStyles, overridingStyles]">
+                waterfall
+            </div>
         </div>
 
     </div>
@@ -35,6 +41,15 @@
                 msg: 'lemon',
                 color: true,
                 tako: 'tako',
+                activeColor: 'yellow',
+                fontSize: 30,
+                baseStyles: {
+                    color: 'greenyellow',
+                    fontSize: '30px'
+                },
+                overridingStyles: {
+                    color: 'pink'
+                }
             }
         },
         props: {},
@@ -55,6 +70,7 @@
         font-weight: bolder;
         font-size: larger;
     }
+
     .tako {
         color: pink;
     }

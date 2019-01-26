@@ -37,14 +37,19 @@
             <p v-show="true">show true</p>
         </div>
 
+        <div>
+            <ul>
+                <li v-for="item in items">{{item}}</li>
+            </ul>
+            <ul>
+                <li v-for="item in objs" v-bind:key="item.name">{{item.name}}</li>
+            </ul>
+        </div>
 
-        <ul>
-            <li v-for="item in items">{{item}}</li>
-        </ul>
-        <ul>
-            <li v-for="item in objs"  v-bind:key="item.name">{{item.name}}</li>
-        </ul>
-
+        <div>
+            <input type="text" v-model="inputName">
+            <button @click="log">log inputName</button>
+        </div>
     </div>
 </template>
 
@@ -54,8 +59,9 @@
         name: "Sweet",
         data: function () {
             return {
-                items:['a','b','c','d'],
-                objs:[
+                inputName: 'originName',
+                items: ['a', 'b', 'c', 'd'],
+                objs: [
                     {name: 'jane01'},
                     {name: 'jane02'},
                     {name: 'jane03'},
@@ -82,6 +88,11 @@
         computed: {
             reverseMsg: function () {
                 return this.msg.split('').reverse().join('')
+            }
+        },
+        methods: {
+            log: function () {
+                console.log(this.inputName)
             }
         }
     }

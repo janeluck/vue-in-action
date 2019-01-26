@@ -32,6 +32,11 @@
             <p v-else>333333</p>
         </div>
 
+        <div>
+            <p v-show="false">none</p>
+            <p v-show="true">show true</p>
+        </div>
+
     </div>
 </template>
 

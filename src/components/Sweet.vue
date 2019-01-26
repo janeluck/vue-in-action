@@ -26,6 +26,11 @@
                 waterfall
             </div>
         </div>
+        <div>
+            <p v-if="pType === 1">111111</p>
+            <p v-else-if="pType === 2">222222</p>
+            <p v-else>333333</p>
+        </div>
 
     </div>
 </template>
@@ -36,6 +41,7 @@
         name: "Sweet",
         data: function () {
             return {
+                pType: 2,
                 isButtonDisabled: false,
                 jane: 'xxx',
                 msg: 'lemon',

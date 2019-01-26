@@ -16,6 +16,9 @@
             <p class="font"
                v-bind:class="{color: color}"
             >green</p>
+            <p
+               v-bind:class="[tako]"
+            >pink</p>
         </div>
 
     </div>
@@ -30,7 +33,8 @@
                 isButtonDisabled: false,
                 jane: 'xxx',
                 msg: 'lemon',
-                color: true
+                color: true,
+                tako: 'tako',
             }
         },
         props: {},
@@ -50,5 +54,8 @@
     .font {
         font-weight: bolder;
         font-size: larger;
+    }
+    .tako {
+        color: pink;
     }
 </style>
